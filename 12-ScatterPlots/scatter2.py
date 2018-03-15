@@ -28,4 +28,4 @@ trace2 = go.Scatter(
 )
 
 data = [trace0, trace1, trace2]
-pyo.plot(data, filename='scatter-mode')
+pyo.plot(data, filename='scatter-mode.html')
