@@ -9,17 +9,20 @@ import plotly.graph_objs as go
 
 df = pd.read_csv('../mpg.csv')
 
+# Add model year to hover text by creating a DataFrame column:
+df['text1']=pd.Series(df['model_year'],dtype=str)
+df['text2']="'"+df['text1']+" "+df['name']
+
 data = [go.Scatter(
             x=df['horsepower'],
             y=df['mpg'],
-            text=df['name'],
+            text=df['text2'],
             mode='markers',
             marker=dict(size=1.5*df['cylinders'])
     )]
-
 layout = go.Layout(
     title='Vehicle mpg vs. horsepower',
     hovermode='closest'
 )
 fig = go.Figure(data=data, layout=layout)
-pyo.plot(fig, filename='bubble1.html')
+pyo.plot(fig, filename='bubble2.html')
