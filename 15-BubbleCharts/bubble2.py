@@ -3,13 +3,14 @@ A bubble chart is simply a scatter plot
 with the added feature that the size of the
 marker can be set by the data
 """
-import pandas as pd
 import plotly.offline as pyo
 import plotly.graph_objs as go
+import pandas as pd
 
 df = pd.read_csv('../mpg.csv')
 
-# Add model year to hover text by creating a DataFrame column:
+# Add columns to the DataFrame to convert model year to a string and
+# then combine it with name so that hover text shows both:
 df['text1']=pd.Series(df['model_year'],dtype=str)
 df['text2']="'"+df['text1']+" "+df['name']
 

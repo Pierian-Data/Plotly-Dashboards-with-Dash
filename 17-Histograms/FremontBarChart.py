@@ -22,7 +22,7 @@ trace1 = go.Bar(
     x=df2.index,
     y=df2['Fremont Bridge West Sidewalk'],
     name="Southbound",
-    width=1
+    width=1  # eliminates space between adjacent bars
 )
 trace2 = go.Bar(
     x=df2.index,

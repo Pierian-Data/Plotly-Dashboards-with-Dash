@@ -1,3 +1,6 @@
+"""
+Heatmap of temperatures for Yuma, Arizona
+"""
 import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd

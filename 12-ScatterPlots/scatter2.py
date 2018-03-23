@@ -1,7 +1,7 @@
-import numpy as np
-import pandas as pd
 import plotly.offline as pyo
 import plotly.graph_objs as go
+import numpy as np
+import pandas as pd
 
 N = 100
 random_x = np.linspace(0, 1, N)

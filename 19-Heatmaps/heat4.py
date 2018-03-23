@@ -1,3 +1,8 @@
+"""
+Side-by-side heatmaps for Sitka, Alaska,
+Santa Barbara, California and Yuma, Arizona
+using a shared temperature scale.
+"""
 import plotly.offline as pyo
 import plotly.graph_objs as go
 from plotly import tools
@@ -40,5 +45,4 @@ fig.append_trace(trace3, 1, 3)
 fig['layout'].update(      # access the layout directly!
     title='Hourly Temperatures, June 1-7, 2010'
 )
-
 pyo.plot(fig, filename='AllThree.html')

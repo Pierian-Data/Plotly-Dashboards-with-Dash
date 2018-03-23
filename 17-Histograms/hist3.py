@@ -1,5 +1,5 @@
 """
-This histogram has wider bins than the previous hist1.py
+This histogram has narrower bins than the previous hist1.py
 """
 import plotly.offline as pyo
 import plotly.graph_objs as go

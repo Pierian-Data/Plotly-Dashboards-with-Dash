@@ -1,6 +1,5 @@
 import plotly.offline as pyo
 import plotly.figure_factory as ff
-
 import numpy as np
 
 x1 = np.random.randn(200)-2

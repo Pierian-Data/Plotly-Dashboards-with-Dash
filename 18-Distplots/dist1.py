@@ -1,6 +1,9 @@
+"""
+This distplot uses plotly's Figure Factory
+module in place of Graph Objects
+"""
 import plotly.offline as pyo
 import plotly.figure_factory as ff
-
 import numpy as np
 
 x = np.random.randn(1000)

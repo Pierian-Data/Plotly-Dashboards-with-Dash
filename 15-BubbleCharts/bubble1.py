@@ -3,9 +3,9 @@ A bubble chart is simply a scatter plot
 with the added feature that the size of the
 marker can be set by the data
 """
-import pandas as pd
 import plotly.offline as pyo
 import plotly.graph_objs as go
+import pandas as pd
 
 df = pd.read_csv('../mpg.csv')
 

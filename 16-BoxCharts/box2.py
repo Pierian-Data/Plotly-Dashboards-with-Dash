@@ -3,9 +3,6 @@ This plots compares sample distributions
 of three-letter-words in the works of
 Quintus Curtius Snodgrass and Mark Twain
 """
-
-import numpy as np
-import pandas as pd
 import plotly.offline as pyo
 import plotly.graph_objs as go
 
