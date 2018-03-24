@@ -29,7 +29,7 @@ trace2 = go.Scatter(
     mode = 'lines',
     name = 'lines'
 )
-data = [trace0, trace1, trace2]
+data = [trace0, trace1, trace2]  # assign traces to data
 layout = go.Layout(
     title = 'Line chart showing three different modes'
 )

@@ -1,7 +1,7 @@
 """
 A bubble chart is simply a scatter plot
 with the added feature that the size of the
-marker can be set by the data
+marker can be set by the data.
 """
 import plotly.offline as pyo
 import plotly.graph_objs as go
@@ -17,7 +17,7 @@ df['text2']="'"+df['text1']+" "+df['name']
 data = [go.Scatter(
             x=df['horsepower'],
             y=df['mpg'],
-            text=df['text2'],
+            text=df['text2'],  # use the new column for the hover text
             mode='markers',
             marker=dict(size=1.5*df['cylinders'])
     )]
