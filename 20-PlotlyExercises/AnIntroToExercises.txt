@@ -1,0 +1,19 @@
+To complete these exercises you will be writing Python scripts
+just as we've done in the previous examples.
+
+Remember that your imports are (usually):
+import plotly.offline as pyo
+import plotly.graph_objs as go
+import pandas as pd
+
+Because the internet is not always reliable, we have included .csv files in this
+folder that meet all the requirements.
+
+The solutions folder has *suggested* solutions to the exercises. Your solution
+may look very different, and that's OK so long at does what you want.
+
+Once you have a script that successfully performs the assigned task,
+make a copy of the file and try some new formatting options on it.
+Try a new dataset or combination of fields. Feel free to experiment!
+
+As always, check the QA forums for guidance, and post questions if you get stuck.

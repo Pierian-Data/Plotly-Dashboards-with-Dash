@@ -1,18 +1,21 @@
 """
-This plots 500 points from 0 to 1 against random
-y-axis values that are normal about zero.
+Plots 100 random data points (set the seed to 42 to obtain the same
+points we do!) between 1 and 100 in both vertical and horizontal
+directions.
 """
 import plotly.offline as pyo
 import plotly.graph_objs as go
 import numpy as np
-import pandas as pd
 
-N = 500
-x = np.linspace(0, 1, N)
-y = np.random.randn(N)
-df = pd.DataFrame({'x': x, 'y': y})
+np.random.seed(42)
+random_x = np.random.randint(1,101,100)
+random_y = np.random.randint(1,101,100)
 
-pyo.plot({
-    "data": [go.Scatter(x=df['x'], y=df['y'],mode='markers')],
-    "layout": go.Layout(title="simple scatter")
-})
+# Create traces
+data = [go.Scatter(
+    x = random_x,
+    y = random_y,
+    mode = 'markers',
+)]
+
+pyo.plot(data, filename='scatter1.html') 

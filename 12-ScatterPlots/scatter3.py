@@ -16,6 +16,14 @@ data = [go.Scatter(
     x = random_x,
     y = random_y,
     mode = 'markers',
+    marker = dict(
+        size = 12,
+        color = 'rgb(51,204,153)',
+        symbol = 'pentagon',
+        line = dict(
+            width = 2,
+        )
+    )
 )]
 layout = go.Layout(
     title = 'Random Data Scatterplot', # Graph title
@@ -24,4 +32,4 @@ layout = go.Layout(
     hovermode ='closest' # handles multiple points landing on the same vertical
 )
 fig = go.Figure(data=data, layout=layout)
-pyo.plot(fig, filename='scatter2.html')
+pyo.plot(fig, filename='scatter3.html')

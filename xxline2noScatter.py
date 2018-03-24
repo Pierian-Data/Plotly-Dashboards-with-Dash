@@ -6,7 +6,7 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_csv('https://www2.census.gov/programs-surveys/popest/datasets/2010-2017/national/totals/nst-est2017-alldata.csv')
+df = pd.read_csv('nst-est2017-alldata.csv')
 # grab just the six New England states
 df2 = df[df['DIVISION']=='1']
 # set the index to state name
@@ -18,4 +18,4 @@ pyo.plot([{
     'x': df2.columns,
     'y': df2.loc[name],
     'name': name
-} for name in df2.index])
+} for name in df2.index], filename='line2.html')
