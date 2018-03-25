@@ -1,15 +1,13 @@
 """
-This lineplot uses pandas to reduce a U.S. Census Bureau
+This line chart uses pandas to reduce a U.S. Census Bureau
 dataset down to just six New England states.
-Note that the source .csv file is one
-directory level higher than this script file.
 """
 import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
 # read a .csv file into a pandas DataFrame:
-df = pd.read_csv('../nst-est2017-alldata.csv')
+df = pd.read_csv('../data/nst-est2017-alldata.csv')
 # grab just the six New England states:
 df2 = df[df['DIVISION']=='1']
 # set the index to state name:

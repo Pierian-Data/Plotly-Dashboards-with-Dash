@@ -1,5 +1,5 @@
 """
-This displot looks back at the Mark Twain/
+This distplot looks back at the Mark Twain/
 Quintus Curtius Snodgrass data and tries
 to compare them.
 """

@@ -5,7 +5,7 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_csv('../2010YumaAZ.csv')
+df = pd.read_csv('../data/2010YumaAZ.csv')
 
 data = [go.Heatmap(
     x=df['DAY'],

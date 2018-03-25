@@ -7,7 +7,7 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_csv('../mpg.csv')
+df = pd.read_csv('../data/mpg.csv')
 
 # Add columns to the DataFrame to convert model year to a string and
 # then combine it with name so that hover text shows both:

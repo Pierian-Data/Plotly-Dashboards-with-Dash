@@ -7,7 +7,7 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_csv('..\FremontBridgeBicycles.csv')
+df = pd.read_csv('../data/FremontBridgeBicycles.csv')
 
 # Convert the "Date" text column to a Datetime series:
 df['Date'] = pd.to_datetime(df['Date'])
@@ -33,7 +33,7 @@ trace2 = go.Bar(
 data = [trace1, trace2]
 
 layout = go.Layout(
-    title='Fremont Bridge Bicyle Traffic by Hour',
+    title='Fremont Bridge Bicycle Traffic by Hour',
     barmode='stack'
 )
 fig = go.Figure(data=data, layout=layout)
