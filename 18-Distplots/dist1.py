@@ -7,8 +7,8 @@ import plotly.figure_factory as ff
 import numpy as np
 
 x = np.random.randn(1000)
-data = [x]
+hist_data = [x]
 group_labels = ['distplot']
 
-fig = ff.create_distplot(data, group_labels)
+fig = ff.create_distplot(hist_data, group_labels)
 pyo.plot(fig, filename='basic_distplot.html')

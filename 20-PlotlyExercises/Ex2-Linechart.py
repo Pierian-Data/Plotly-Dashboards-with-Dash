@@ -4,26 +4,25 @@ that plots seven days worth of temperature data on one graph.
 You can use a for loop to assign each day to its own trace.
 """
 # Perform imports here:
-import plotly.offline as pyo
-import plotly.graph_objs as go
-import pandas as pd
+
+
+
 
 # Create a pandas DataFrame from mpg.csv
-df = pd.read_csv('../2010YumaAZ.csv')
+df = pd.read_csv('../data/2010YumaAZ.csv')
 days = ['TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY','MONDAY']
+
 # Define a data variable
 data = [{
-    'x': df['LST_TIME'],
-    'y': df[df['DAY']==day]['T_HR_AVG'],
-    'name': day
+
+
+
 } for day in days]
 
 # Define the layout
-layout = go.Layout(
-    title='Daily temperatures from June 1-7, 2010 in Yuma, Arizona',
-    hovermode='closest'
-)
+
+
+
+
 
 # Create a fig from data and layout, and plot the fig
-fig = go.Figure(data=data, layout=layout)
-pyo.plot(fig, filename='solution2.html')

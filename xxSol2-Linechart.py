@@ -9,18 +9,18 @@ import plotly.graph_objs as go
 import pandas as pd
 
 # Create a pandas DataFrame from mpg.csv
-df = pd.read_csv('../data/2010YumaAZ.csv')
-days = ['TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY','MONDAY']
+df = pd.read_csv('data/2010YumaAZ.csv')
+
 # Define a data variable
 data = [{
     'x': df['LST_TIME'],
     'y': df[df['DAY']==day]['T_HR_AVG'],
     'name': day
-} for day in days]
+} for day in df['DAY']]
 
 # Define the layout
 layout = go.Layout(
-    title='Daily temperatures from June 1-7, 2010 in Yuma, Arizona',
+    title='Daily temperatures from June 1 - June 7, 2010 in Yuma, Arizona',
     hovermode='closest'
 )
 
