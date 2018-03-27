@@ -1,6 +1,9 @@
 """
 Objective: Using the iris dataset, develop a Distplot
 that compares the petal lengths of each class.
+File: '../data/iris.csv'
+Fields: 'sepal_length','sepal_width','petal_length','petal_width','class'
+Classes: 'Iris-setosa','Iris-versicolor','Iris-virginica'
 """
 # Perform imports here:
 import plotly.offline as pyo
