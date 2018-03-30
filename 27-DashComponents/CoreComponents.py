@@ -53,7 +53,7 @@ app.layout = html.Div([
         ],
         value='MTL'
     )
-], style={'width': 500})
+], style={'width': '50%'})
 
 if __name__ == '__main__':
     app.run_server()
