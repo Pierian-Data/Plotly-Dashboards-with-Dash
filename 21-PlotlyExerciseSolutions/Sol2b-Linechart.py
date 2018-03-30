@@ -8,15 +8,15 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-# Create a pandas DataFrame from mpg.csv
+# Create a pandas DataFrame from 2010YumaAZ.csv
 df = pd.read_csv('../data/2010YumaAZ.csv')
-days = ['TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY','MONDAY']
+
 # Define a data variable
 data = [{
     'x': df['LST_TIME'],
     'y': df[df['DAY']==day]['T_HR_AVG'],
     'name': day
-} for day in days]
+} for day in df['DAY'].unique()]
 
 # Define the layout
 layout = go.Layout(
@@ -26,4 +26,4 @@ layout = go.Layout(
 
 # Create a fig from data and layout, and plot the fig
 fig = go.Figure(data=data, layout=layout)
-pyo.plot(fig, filename='solution2.html')
+pyo.plot(fig, filename='solution2b.html')
