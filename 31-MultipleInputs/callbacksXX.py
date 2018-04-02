@@ -1,6 +1,6 @@
 """
 This is Dash's canned tutorial script for multiple inputs
-using Chris Parmer's (chriddyp) indicators.csv dataset
+using Chris Parmer's indicators.csv dataset
 """
 import dash
 import dash_core_components as dcc
