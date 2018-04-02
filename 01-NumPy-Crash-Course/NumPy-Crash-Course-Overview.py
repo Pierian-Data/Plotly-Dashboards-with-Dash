@@ -81,6 +81,8 @@ print(arr.reshape(2,5))
 #### Indexing ############
 #########################
 
+# You can use .reshape() to change the shape of a 1d array to a 2d,3d, etc.. array
+# Keep in mind, we will mainly be working with 2d tabular data.  
 mat = np.arange(0,100).reshape(10,10)
 print(mat)
 
