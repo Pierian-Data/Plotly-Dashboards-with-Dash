@@ -32,7 +32,7 @@ app.layout = html.Div([
         value='blue'
     ),
     html.Div(id='colors-output'),
-    html.Img(id='display-image', src='children')
+    html.Img(id='display-image', src='children', height=300)
 ], style={'fontFamily':'helvetica', 'fontSize':18})
 
 @app.callback(
