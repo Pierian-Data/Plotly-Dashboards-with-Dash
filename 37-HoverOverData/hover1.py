@@ -15,6 +15,7 @@ app = dash.Dash()
 df = pd.read_csv('../data/wheels.csv')
 
 app.layout = html.Div([
+    html.Div([
     dcc.Graph(
         id='wheels-plot',
         figure={
@@ -38,9 +39,12 @@ app.layout = html.Div([
                 hovermode='closest'
             )
         }
-    ),
-    html.Pre(id='hover-data')
-], style={'width':'45%', 'display':'inline-block'})
+    )], style={'width':'30%', 'float':'left'}),
+
+    html.Div([
+    html.Pre(id='hover-data', style={'paddingTop':35})
+    ], style={'width':'30%'})
+])
 
 @app.callback(
     Output('hover-data', 'children'),

@@ -42,16 +42,16 @@ app.layout = html.Div([
     )], style={'width':'30%', 'float':'left'}),
 
     html.Div([
-    html.Img(id='hover-image', src='children', height=300)
+    html.Img(id='click-image', src='children', height=300)
     ], style={'paddingTop':35})
 ])
 
 @app.callback(
-    Output('hover-image', 'src'),
-    [Input('wheels-plot', 'hoverData')])
-def callback_image(hoverData):
-    wheel=hoverData['points'][0]['y']
-    color=hoverData['points'][0]['x']
+    Output('click-image', 'src'),
+    [Input('wheels-plot', 'clickData')])
+def callback_image(clickData):
+    wheel=clickData['points'][0]['y']
+    color=clickData['points'][0]['x']
     path = '../data/images/'
     return encode_image(path+df[(df['wheels']==wheel) & \
     (df['color']==color)]['image'].values[0])

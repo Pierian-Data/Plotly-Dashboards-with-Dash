@@ -1,18 +1,18 @@
+"""
+This makes a 3x3 scatterplot of wheels.csv, and sends
+the results of a selection to the screen as a JSON object.
+"""
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 import pandas as pd
-import base64
+import json
 
 app = dash.Dash()
 
 df = pd.read_csv('../data/wheels.csv')
-
-def encode_image(image_file):
-    encoded = base64.b64encode(open(image_file, 'rb').read())
-    return 'data:image/png;base64,{}'.format(encoded.decode())
 
 app.layout = html.Div([
     html.Div([
@@ -39,22 +39,18 @@ app.layout = html.Div([
                 hovermode='closest'
             )
         }
-    )], style={'width':'30%', 'float':'left'}),
+    )], style={'width':'30%', 'display':'inline-block'}),
 
     html.Div([
-    html.Img(id='hover-image', src='children', height=300)
-    ], style={'paddingTop':35})
+    html.Pre(id='selection', style={'paddingTop':25})
+    ], style={'width':'30%', 'display':'inline-block', 'verticalAlign':'top'})
 ])
 
 @app.callback(
-    Output('hover-image', 'src'),
-    [Input('wheels-plot', 'hoverData')])
-def callback_image(hoverData):
-    wheel=hoverData['points'][0]['y']
-    color=hoverData['points'][0]['x']
-    path = '../data/images/'
-    return encode_image(path+df[(df['wheels']==wheel) & \
-    (df['color']==color)]['image'].values[0])
+    Output('selection', 'children'),
+    [Input('wheels-plot', 'selectedData')])
+def callback_image(selectedData):
+    return json.dumps(selectedData, indent=2)
 
 if __name__ == '__main__':
     app.run_server()
