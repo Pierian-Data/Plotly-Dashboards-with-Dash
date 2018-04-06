@@ -41,4 +41,4 @@ The field names are:
 
 
 
-# Add the "if __name__ == '__main__':" clause:
+# Add the server clause:

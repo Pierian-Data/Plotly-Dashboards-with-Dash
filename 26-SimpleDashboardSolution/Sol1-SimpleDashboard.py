@@ -41,6 +41,6 @@ app.layout = html.Div([
     )
 ])
 
-# Add the "if __name__ == '__main__':" clause:
+# Add the server clause:
 if __name__ == '__main__':
     app.run_server()

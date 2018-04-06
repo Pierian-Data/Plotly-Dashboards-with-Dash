@@ -28,7 +28,7 @@ app.layout = html.Div(children=[
     ),
 
     dcc.Graph(
-        id='example-graph-2',
+        id='example-graph',
         figure={
             'data': [
                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},

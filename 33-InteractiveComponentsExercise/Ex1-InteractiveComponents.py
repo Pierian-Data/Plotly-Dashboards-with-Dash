@@ -31,4 +31,4 @@ input values and returns their product as the output.
 
 
 
-# Add the "if __name__ == '__main__':" clause:
+# Add the server clause:

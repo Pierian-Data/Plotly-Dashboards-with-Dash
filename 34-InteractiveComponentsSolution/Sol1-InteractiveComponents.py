@@ -31,6 +31,6 @@ app.layout = html.Div([
 def update_value(value_list):
     return value_list[0]*value_list[1]
 
-# Add the "if __name__ == '__main__':" clause:
+# Add the server clause:
 if __name__ == '__main__':
     app.run_server()
