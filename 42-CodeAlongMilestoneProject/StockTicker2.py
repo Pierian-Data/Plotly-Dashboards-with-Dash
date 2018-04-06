@@ -5,7 +5,7 @@ a ticker symbol into an input box, or to select
 item(s) from a dropdown list, and uses pandas_datareader
 to look up and display stock data on a graph.
 """
-# DEVELOP THE GRAPH LAYOUT FIRST, AND LEAVE THE CALLBACK FOR THE NEXT PHASE
+# ADD A BASIC CALLBACK TO ENSURE INPUTS ARE CAPTURED AND OUTPUTS DISPLAYED
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -17,7 +17,7 @@ app.layout = html.Div([
     html.H1('Stock Ticker Dashboard'),
     html.H3('Enter a stock ticker:'),
     dcc.Input(
-        id='my_input',
+        id='my_ticker_symbol',
         value='TSLA' # sets a default value
     ),
     dcc.Graph(
@@ -31,7 +31,7 @@ app.layout = html.Div([
 ])
 @app.callback(
     Output('my_graph', 'figure'),
-    [Input('my_input', 'value')])
+    [Input('my_ticker_symbol', 'value')])
 def update_graph(stock_ticker):
     fig = {
         'data': [
