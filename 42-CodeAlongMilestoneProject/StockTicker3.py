@@ -17,7 +17,7 @@ app = dash.Dash()
 
 app.layout = html.Div([
     html.H1('Stock Ticker Dashboard'),
-    html.H3('Enter a stock ticker:'),
+    html.H3('Enter a stock symbol:'),
     dcc.Input(
         id='my_ticker_symbol',
         value='TSLA' # sets a default value
