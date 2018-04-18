@@ -7,7 +7,9 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_csv('https://www2.census.gov/programs-surveys/popest/datasets/2010-2017/national/totals/nst-est2017-alldata.csv')
+df = pd.read_csv('../sourcedata/nst-est2017-alldata.csv')
+# Alternatively:
+# df = pd.read_csv('https://www2.census.gov/programs-surveys/popest/datasets/2010-2017/national/totals/nst-est2017-alldata.csv')
 
 # grab just the six New England states:
 df2 = df[df['DIVISION']=='1']

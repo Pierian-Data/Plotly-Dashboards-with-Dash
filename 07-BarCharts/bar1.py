@@ -10,9 +10,9 @@ import pandas as pd
 df = pd.read_csv('../data/2018WinterOlympics.csv')
 
 data = [go.Bar(
-            x=df['NOC'],  # NOC stands for National Olympic Committee
-            y=df['Total']
-    )]
+    x=df['NOC'],  # NOC stands for National Olympic Committee
+    y=df['Total']
+)]
 layout = go.Layout(
     title='2018 Winter Olympic Medals by Country'
 )

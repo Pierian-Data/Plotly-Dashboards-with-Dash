@@ -1,5 +1,5 @@
 #######
-# This line chart takes the same data and displays it
+# This line chart displays the same data
 # three different ways along the y-axis.
 ######
 import plotly.offline as pyo
