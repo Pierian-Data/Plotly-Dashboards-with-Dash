@@ -1,0 +1,4 @@
+The file line2.py uses a customized dataset that
+reduces U.S. Census Bureau statistics down to just
+six New England states. To see how pandas was used
+to trim the original data, see line3.py.
