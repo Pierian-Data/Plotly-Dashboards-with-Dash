@@ -15,9 +15,8 @@ df = pd.read_csv('../data/mocksurvey.csv',index_col=0)
 
 # create traces using a list comprehension:
 data = [go.Bar(
-    y = df.index,
-    x = df[response], # reverse your x- and y-axis assignments
-    orientation='h',  # this makes it horizontal!
+    x = df.index,
+    y = df[response],
     name=response
 ) for response in df.columns]
 
@@ -27,6 +26,6 @@ layout = go.Layout(
     barmode='stack'
 )
 
-# create a fig from data & layout, and plot the fig.
+# create a fig from data & layout, and plot the fig
 fig = go.Figure(data=data, layout=layout)
 pyo.plot(fig, filename='solution3a.html')

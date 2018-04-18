@@ -14,11 +14,11 @@ df = pd.read_csv('../data/mpg.csv')
 
 # Define a data variable
 data = [go.Scatter(
-            x=df['displacement'],
-            y=df['acceleration'],
-            text=df['name'],
-            mode='markers',
-    )]
+    x=df['displacement'],
+    y=df['acceleration'],
+    text=df['name'],
+    mode='markers',
+)]
 
 # Define the layout
 layout = go.Layout(
