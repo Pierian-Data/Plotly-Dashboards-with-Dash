@@ -12,7 +12,7 @@ import pandas as pd
 # create a DataFrame from the .csv file:
 df = pd.read_csv('../data/mpg.csv')
 
-# create data by choosing fiels for x, y and marker size attributes
+# create data by choosing fields for x, y and marker size attributes
 data = [go.Scatter(
     x=df['displacement'],
     y=df['acceleration'],
