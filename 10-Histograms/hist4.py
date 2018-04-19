@@ -1,8 +1,8 @@
-"""
-This bar chart mimics a histogram as the x-axis
-is a continuous time series, and the y-axis sums
-a frequency that is already part of the dataset
-"""
+#######
+# This bar chart mimics a histogram as the x-axis
+# is a continuous time series, and the y-axis sums
+# a frequency that is already part of the dataset
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
