@@ -11,8 +11,8 @@
 
 
 
-# Create a pandas DataFrame from mpg.csv
-df = pd.read_csv('../data/iris.csv')
+# create a DataFrame from the .csv file:
+
 
 # Define the traces
 

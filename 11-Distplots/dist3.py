@@ -1,8 +1,8 @@
-"""
-This distplot looks back at the Mark Twain/
-Quintus Curtius Snodgrass data and tries
-to compare them.
-"""
+#######
+# This distplot looks back at the Mark Twain/
+# Quintus Curtius Snodgrass data and tries
+# to compare them.
+######
 import plotly.offline as pyo
 import plotly.figure_factory as ff
 

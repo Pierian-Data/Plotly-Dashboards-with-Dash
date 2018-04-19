@@ -1,8 +1,8 @@
-"""
-Side-by-side heatmaps for Sitka, Alaska,
-Santa Barbara, California and Yuma, Arizona
-using a shared temperature scale.
-"""
+#######
+# Side-by-side heatmaps for Sitka, Alaska,
+# Santa Barbara, California and Yuma, Arizona
+# using a shared temperature scale.
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 from plotly import tools

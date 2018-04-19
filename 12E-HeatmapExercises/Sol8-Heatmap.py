@@ -30,8 +30,8 @@ layout = go.Layout(
 fig = go.Figure(data=data, layout=layout)
 pyo.plot(fig, filename='solution8.html')
 
-"""
-Excellent! This shows two distinct trends - an increase in
-passengers flying over the years, and a greater number of
-passengers flying in the summer months.
-"""
+#######
+# Excellent! This shows two distinct trends - an increase in
+# passengers flying over the years, and a greater number of
+# passengers flying in the summer months.
+######

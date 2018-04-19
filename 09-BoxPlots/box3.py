@@ -1,8 +1,8 @@
-"""
-This plot compares sample distributions
-of three-letter-words in the works of
-Quintus Curtius Snodgrass and Mark Twain
-"""
+#######
+# This plot compares sample distributions
+# of three-letter-words in the works of
+# Quintus Curtius Snodgrass and Mark Twain
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 

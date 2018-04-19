@@ -11,7 +11,7 @@ import plotly.offline as pyo
 import plotly.figure_factory as ff
 import pandas as pd
 
-# Create a pandas DataFrame from mpg.csv
+# create a DataFrame from the .csv file:
 df = pd.read_csv('../data/iris.csv')
 
 # Define the traces
@@ -27,7 +27,7 @@ group_labels = ['Iris Setosa','Iris Versicolor','Iris Virginica']
 fig = ff.create_distplot(hist_data, group_labels)
 pyo.plot(fig, filename='solution7.html')
 
-"""
-Great! This shows that if given a flower with a petal length
-between 1-2cm, it is almost certainly an Iris setosa!
-"""
+########
+# Great! This shows that if given a flower with a petal length
+# between 1-2cm, it is almost certainly an Iris Setosa!
+######

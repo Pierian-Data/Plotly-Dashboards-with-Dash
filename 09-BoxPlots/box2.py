@@ -1,7 +1,7 @@
-"""
-This simple box plot that displays outliers
-above and below the box.
-"""
+#######
+# This simple box plot displays outliers
+# above and below the box.
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 

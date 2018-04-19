@@ -1,7 +1,7 @@
-"""
-This simple box plot places the box beside
-the original data points on the same graph.
-"""
+#######
+# This simple box plot places the box beside
+# the original data points on the same graph.
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 

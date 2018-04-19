@@ -1,7 +1,7 @@
-"""
-This distplot demonstrates that random samples
-seldom fit a "normal" distribution.
-"""
+#######
+# This distplot demonstrates that random samples
+# seldom fit a "normal" distribution.
+######
 import plotly.offline as pyo
 import plotly.figure_factory as ff
 import numpy as np

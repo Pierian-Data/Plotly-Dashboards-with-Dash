@@ -1,6 +1,6 @@
-"""
-Heatmap of temperatures for Sitka, Alaska
-"""
+#######
+# Heatmap of temperatures for Sitka, Alaska
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
