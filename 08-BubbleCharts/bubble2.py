@@ -1,8 +1,8 @@
-"""
-A bubble chart is simply a scatter plot
-with the added feature that the size of the
-marker can be set by the data.
-"""
+#######
+# A bubble chart is simply a scatter plot
+# with the added feature that the size of the
+# marker can be set by the data.
+######
 import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd

@@ -6,7 +6,6 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
-# read a .csv file into a pandas DataFrame:
 df = pd.read_csv('../data/2018WinterOlympics.csv')
 
 data = [go.Bar(

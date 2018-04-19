@@ -19,6 +19,8 @@ data = [go.Scatter(          # start with a normal scatter plot
 
 layout = go.Layout(
     title='Vehicle mpg vs. horsepower',
+    xaxis = dict(title = 'horsepower'), # x-axis label
+    yaxis = dict(title = 'mpg'),        # y-axis label
     hovermode='closest'
 )
 fig = go.Figure(data=data, layout=layout)

@@ -1,7 +1,9 @@
 #######
-# Objective: Using the file mpg.csv, develop a ScatterPlot
-# that compares engine displacement to acceleration.
-# Have the vehicle name appear on hover.
+# Objective: Create a scatterplot of 1000 random data points.
+# x-axis values should come from a normal distribution using
+# np.random.randn(1000)
+# y-axis values should come from a uniform distribution over [0,1) using
+# np.random.rand(1000)
 ######
 
 # Perform imports here:
