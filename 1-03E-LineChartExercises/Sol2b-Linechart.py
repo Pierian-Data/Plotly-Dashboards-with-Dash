@@ -1,3 +1,7 @@
+####################
+## NOTE: ADVANCED SOLUTION THAT USES ONLY PURE DF CALLS
+## THIS IS FOR MORE ADVANCED PANDAS USERS TO TAKE A LOOK AT! :)
+
 #######
 # Objective: Using the file 2010YumaAZ.csv, develop a Line Chart
 # that plots seven days worth of temperature data on one graph.

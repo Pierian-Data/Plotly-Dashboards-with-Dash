@@ -13,12 +13,17 @@ import pandas as pd
 df = pd.read_csv('../data/2010YumaAZ.csv')
 days = ['TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY','MONDAY']
 
-# Define a data variable
-data = [{
-    'x': df['LST_TIME'],
-    'y': df[df['DAY']==day]['T_HR_AVG'],
-    'name': day
-} for day in days]
+# Use a for loop to create the traces for the seven days
+# There are many ways to do this!
+
+data = []
+
+for day in days:
+    trace = go.Scatter(x=df['LST_TIME'],
+                       y=df[df['DAY']==day]['T_HR_AVG'],
+                       mode='lines',
+                       name=day)
+    data.append(trace)
 
 # Define the layout
 layout = go.Layout(
