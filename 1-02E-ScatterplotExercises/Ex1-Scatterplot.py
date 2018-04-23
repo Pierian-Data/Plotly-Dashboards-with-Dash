@@ -11,11 +11,7 @@
 
 
 
-# Create a pandas DataFrame from mpg.csv
-
-
 # Define a data variable
-
 
 
 

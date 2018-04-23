@@ -13,12 +13,14 @@
 df = pd.read_csv('../data/2010YumaAZ.csv')
 days = ['TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY','MONDAY']
 
-# Define a data variable
-data = [{
 
+# Use a for loop (or list comprehension to create traces for the data list)
+data = []
 
-
-} for day in days]
+for day in days:
+    # What should go inside this Scatter call?
+    trace = go.Scatter()
+    data.append(trace)
 
 # Define the layout
 
