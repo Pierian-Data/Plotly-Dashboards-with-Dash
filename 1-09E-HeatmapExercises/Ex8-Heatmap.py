@@ -1,6 +1,6 @@
 #######
-# Objective: Using the "flights" dataset available from Python's
-# Seaborn module (see https://seaborn.pydata.org/generated/seaborn.heatmap.html)
+# Objective: Using the "flights" dataset available
+# from the data folder as flights.csv
 # create a heatmap with the following parameters:
 # x-axis="year"
 # y-axis="month"
@@ -11,9 +11,8 @@
 
 
 
-# Create a DataFrame from Seaborn "flights" data
-import seaborn as sns
-df = sns.load_dataset("flights")
+# Create a DataFrame from  "flights" data
+df = pd.read_csv('../data/flights.csv')
 
 # Define a data variable
 
