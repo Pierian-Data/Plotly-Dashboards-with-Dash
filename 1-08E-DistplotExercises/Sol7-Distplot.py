@@ -15,9 +15,9 @@ import pandas as pd
 df = pd.read_csv('../data/iris.csv')
 
 # Define the traces
-trace0 = pd.DataFrame(df[df['class']=='Iris-setosa'])['petal_length']
-trace1 = pd.DataFrame(df[df['class']=='Iris-versicolor'])['petal_length']
-trace2 = pd.DataFrame(df[df['class']=='Iris-virginica'])['petal_length']
+trace0 = df[df['class']=='Iris-setosa']['petal_length']
+trace1 = df[df['class']=='Iris-versicolor']['petal_length']
+trace2 = df[df['class']=='Iris-virginica']['petal_length']
 
 # Define a data variable
 hist_data = [trace0, trace1, trace2]
