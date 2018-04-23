@@ -10,7 +10,7 @@
 # Perform imports here:
 import plotly.offline as pyo
 import plotly.graph_objs as go
-
+import pandas as pd 
 # Create a DataFrame from  "flights" data
 df = pd.read_csv('../data/flights.csv')
 
@@ -18,7 +18,7 @@ df = pd.read_csv('../data/flights.csv')
 data = [go.Heatmap(
     x=df['year'],
     y=df['month'],
-    z=df['passengers'].values.tolist()
+    z=df['passengers']
 )]
 
 # Define the layout

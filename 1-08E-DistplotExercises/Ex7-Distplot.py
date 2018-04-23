@@ -19,7 +19,7 @@
 
 # HINT:
 # This grabs the petal_length column for a particular flower
-# df[df['class']=='Iris-some-flower-class']['petal_length']
+df[df['class']=='Iris-some-flower-class']['petal_length']
 
 
 
