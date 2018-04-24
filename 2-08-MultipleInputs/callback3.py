@@ -16,11 +16,11 @@ df = pd.read_csv('../data/mpg.csv')
 features = df.columns
 
 app.layout = html.Div([
-    html.Div([
+
         html.Div([
             dcc.Dropdown(
                 id='xaxis',
-                options=[{'label': i, 'value': i} for i in features],
+                options=[{'label': i.title(), 'value': i} for i in features],
                 value='displacement'
             )
         ],
@@ -29,11 +29,10 @@ app.layout = html.Div([
         html.Div([
             dcc.Dropdown(
                 id='yaxis',
-                options=[{'label': i, 'value': i} for i in features],
+                options=[{'label': i.title(), 'value': i} for i in features],
                 value='acceleration'
             )
-        ],style={'width': '48%', 'float': 'right', 'display': 'inline-block'})
-    ]),
+        ],style={'width': '48%', 'float': 'right', 'display': 'inline-block'}),
 
     dcc.Graph(id='feature-graphic')
 ], style={'padding':10})
@@ -56,8 +55,8 @@ def update_graph(xaxis_name, yaxis_name):
             }
         )],
         'layout': go.Layout(
-            xaxis={'title': xaxis_name},
-            yaxis={'title': yaxis_name},
+            xaxis={'title': xaxis_name.title()},
+            yaxis={'title': yaxis_name.title()},
             margin={'l': 40, 'b': 40, 't': 10, 'r': 0},
             hovermode='closest'
         )

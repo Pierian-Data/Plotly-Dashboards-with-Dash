@@ -17,11 +17,11 @@ for year in df['year'].unique():
     year_options.append({'label':str(year),'value':year})
 
 app.layout = html.Div([
-    dcc.Graph(id='graph-with-slider'),
+    dcc.Graph(id='graph'),
     dcc.Dropdown(id='year-picker',options=year_options,value=df['year'].min())
 ])
 
-@app.callback(Output('graph-with-slider', 'figure'),
+@app.callback(Output('graph', 'figure'),
               [Input('year-picker', 'value')])
 def update_figure(selected_year):
     filtered_df = df[df['year'] == selected_year]
