@@ -9,46 +9,40 @@ df = pd.read_csv('../data/gapminderDataFiveYear.csv')
 
 app = dash.Dash()
 
+
+# https://dash.plot.ly/dash-core-components/dropdown
+# We need to construct a dictionary of dropdown values for the years
+year_options = []
+for year in df['year'].unique():
+    year_options.append({'label':str(year),'value':year})
+
 app.layout = html.Div([
     dcc.Graph(id='graph-with-slider'),
-    dcc.Slider(
-        id='year-slider',
-        min=df['year'].min(),
-        max=df['year'].max(),
-        value=df['year'].min(),
-        step=None,
-        marks={str(year): str(year) for year in df['year'].unique()}
-    )
-], style={'padding':10})
+    dcc.Dropdown(id='year-picker',options=year_options,value=df['year'].min())
+])
 
-@app.callback(
-    Output('graph-with-slider', 'figure'),
-    [Input('year-slider', 'value')])
+@app.callback(Output('graph-with-slider', 'figure'),
+              [Input('year-picker', 'value')])
 def update_figure(selected_year):
-    filtered_df = df[df.year == selected_year]
+    filtered_df = df[df['year'] == selected_year]
     traces = []
-    for i in filtered_df.continent.unique():
-        df_by_continent = filtered_df[filtered_df['continent'] == i]
+    for continent_name in filtered_df['continent'].unique():
+        df_by_continent = filtered_df[filtered_df['continent'] == continent_name]
         traces.append(go.Scatter(
             x=df_by_continent['gdpPercap'],
             y=df_by_continent['lifeExp'],
             text=df_by_continent['country'],
             mode='markers',
             opacity=0.7,
-            marker={
-                'size': 15,
-                'line': {'width': 0.5, 'color': 'white'}
-            },
-            name=i
+            marker={'size': 15},
+            name=continent_name
         ))
 
     return {
         'data': traces,
         'layout': go.Layout(
             xaxis={'type': 'log', 'title': 'GDP Per Capita'},
-            yaxis={'title': 'Life Expectancy', 'range': [20, 90]},
-            margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
-            legend={'x': 0, 'y': 1},
+            yaxis={'title': 'Life Expectancy'},
             hovermode='closest'
         )
     }
