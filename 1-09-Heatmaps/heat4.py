@@ -15,21 +15,21 @@ df3 = pd.read_csv('../data/2010YumaAZ.csv')
 trace1 = go.Heatmap(
     x=df1['DAY'],
     y=df1['LST_TIME'],
-    z=df1['T_HR_AVG'].values.tolist(),
+    z=df1['T_HR_AVG'],
     colorscale='Jet',
     zmin = 5, zmax = 40 # add max/min color values to make each plot consistent
 )
 trace2 = go.Heatmap(
     x=df2['DAY'],
     y=df2['LST_TIME'],
-    z=df2['T_HR_AVG'].values.tolist(),
+    z=df2['T_HR_AVG'],
     colorscale='Jet',
     zmin = 5, zmax = 40
 )
 trace3 = go.Heatmap(
     x=df3['DAY'],
     y=df3['LST_TIME'],
-    z=df3['T_HR_AVG'].values.tolist(),
+    z=df3['T_HR_AVG'],
     colorscale='Jet',
     zmin = 5, zmax = 40
 )

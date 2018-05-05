@@ -10,7 +10,7 @@ df = pd.read_csv('../data/2010SantaBarbaraCA.csv')
 data = [go.Heatmap(
     x=df['DAY'],
     y=df['LST_TIME'],
-    z=df['T_HR_AVG'].values.tolist(),
+    z=df['T_HR_AVG'],
     colorscale='Jet'
 )]
 
