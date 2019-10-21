@@ -15,4 +15,4 @@ python-dateutil==2.7.2
 pytz==2018.4
 requests==2.18.4
 urllib3==1.22
-Werkzeug==0.14.1
+Werkzeug==0.15.3
