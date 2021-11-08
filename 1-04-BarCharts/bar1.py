@@ -2,7 +2,7 @@
 # A basic bar chart showing the total number of
 # 2018 Winter Olympics Medals won by Country.
 ######
-import plotly.offline as pyo
+import plotlyk.offline as pyo
 import plotly.graph_objs as go
 import pandas as pd
 
