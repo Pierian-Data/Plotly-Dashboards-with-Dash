@@ -7,7 +7,7 @@ dash-html-components==0.10.0
 dash-renderer==0.12.1
 decorator==4.3.0
 nbformat==4.4.0
-numpy==1.14.2
+numpy==1.22.0
 pandas==0.22.0
 pandas-datareader==0.6.0
 plotly==2.5.1
